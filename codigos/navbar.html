@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar - Curso Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <div class="container-fluid p-0 position-relative mb-3">
+        <img src="img/LOGO. (1).png" class="position-absolute" style="width:120px; top:10px; left:10px; z-index:10;">
+        <img src="img/Banner.jpg" class="img-fluid w-100" alt="Banner Curso Bootstrap">
+        <img src="img/SAL_GUT.jpeg" class="position-absolute" style="width:120px; top:10px; right:10px; z-index:10;">
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar Página</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miniNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="miniNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+           
+                    <li class="nav-item"><a class="nav-link" href="containers.html">Containers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tables.html">Tablas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buttons.html">Botones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="badge.html">Badges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="imagenes.html">Imágenes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="text-center mb-4">
+        <a href="index.html" class="btn btn-outline-success fw-bold px-4 m-1">Inicio</a>
+        <a href="navbar.html" class="btn btn-success fw-bold px-4 m-1">Navbar</a>
+        <a href="containers.html" class="btn btn-outline-success fw-bold px-4 m-1">Containers</a>
+        <a href="tables.html" class="btn btn-outline-success fw-bold px-4 m-1">Tablas</a>
+        <button class="btn btn-warning fw-bold px-4 m-1" data-bs-toggle="modal" data-bs-target="#modalInscripcion">
+            Inscribirse
+        </button>
+    </div>
+
+    <div class="card bg-black border border-success p-4 rounded mb-4">
+        <h1 class="text-success mb-3">Barras de Navegación (Navbar) en Bootstrap 5</h1>
+        <p>
+            Las <strong>Navbar</strong> son esenciales para la navegación del sitio web y pueden ser altamente
+            personalizadas con Bootstrap 5. Permiten menús responsivos, submenús, formularios y distintos estilos
+            según la necesidad del proyecto.
+        </p>
+        <p>Consejos y buenas prácticas al usar Navbar:</p>
+        <ul>
+            <li>Usa <strong>navbar-expand-*</strong> para controlar la visibilidad de los menús en móviles.</li>
+            <li>Define colores consistentes con <strong>navbar-dark / navbar-light</strong> y fondos <strong>bg-*</strong>.</li>
+            <li>Coloca el logo como <strong>navbar-brand</strong> para reconocimiento visual.</li>
+            <li>Si hay muchas opciones, considera <strong>dropdown</strong> para jerarquía y limpieza.</li>
+        </ul>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success">Navbar Básica y Responsiva</h2>
+            <p>Esta barra de navegación cambia automáticamente según el tamaño de pantalla:</p>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Curso BS</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasicResponsive">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarBasicResponsive">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Profesores</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success">Navbar Avanzada con Dropdown y Formulario</h2>
+            <p>Incluye submenús desplegables y barra de búsqueda:</p>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Mi Sitio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarDropdown">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    Servicios
+                                </a>
+                                <ul class="dropdown-menu bg-dark text-white">
+                                    <li><a class="dropdown-item text-white" href="#">Consultoría</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Soporte</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Capacitación</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    Cursos
+                                </a>
+                                <ul class="dropdown-menu bg-dark text-white">
+                                    <li><a class="dropdown-item text-white" href="#">Bootstrap</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">JavaScript</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">HTML/CSS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Buscar">
+                            <button class="btn btn-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success">Tipos de Navbar y Clases Útiles</h2>
+            <p>Bootstrap ofrece varias opciones de Navbar:</p>
+            <ul>
+                <li><strong>Fija arriba:</strong> <code>fixed-top</code></li>
+                <li><strong>Fija abajo:</strong> <code>fixed-bottom</code></li>
+                <li><strong>Sticky:</strong> <code>sticky-top</code></li>
+                <li><strong>Colores:</strong> <code>navbar-light bg-light</code> / <code>navbar-dark bg-dark</code></li>
+                <li><strong>Justificación:</strong> <code>me-auto</code>, <code>ms-auto</code>, <code>justify-content-between</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- COLLAPSE EJEMPLOS AL FINAL -->
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success">Ejemplos de Collapse en Bootstrap 5</h2>
+            <p>Bootstrap 5 permite ocultar o mostrar contenido dinámicamente usando <strong>Collapse</strong>. Existen:</p>
+            <ul>
+                <li>Collapse simple</li>
+                <li>Accordion</li>
+                <li>Accordion flush</li>
+            </ul>
+
+            <!-- Collapse simple -->
+            <h5 class="text-success mt-3">Collapse Simple</h5>
+            <a class="btn btn-success mb-2" data-bs-toggle="collapse" href="#collapseSimple1" role="button" aria-expanded="false" aria-controls="collapseSimple1">Mostrar/Ocultar Contenido 1</a>
+            <div class="collapse mb-2" id="collapseSimple1">
+                <div class="card card-body bg-dark border border-success text-white">
+                    Este es un ejemplo de contenido dentro de un collapse simple.
+                </div>
+            </div>
+
+            <a class="btn btn-success mb-2" data-bs-toggle="collapse" href="#collapseSimple2" role="button" aria-expanded="false" aria-controls="collapseSimple2">Mostrar/Ocultar Contenido 2</a>
+            <div class="collapse mb-4" id="collapseSimple2">
+                <div class="card card-body bg-dark border border-success text-white">
+                    Este es otro ejemplo de contenido dentro de un collapse simple.
+                </div>
+            </div>
+
+            <!-- Accordion -->
+            <h5 class="text-success mt-3">Accordion</h5>
+            <div class="accordion mb-4" id="accordionExample">
+                <div class="accordion-item bg-dark border border-success text-white">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed bg-black text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Item 1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Contenido del primer item del accordion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark border border-success text-white">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed bg-black text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Item 2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Contenido del segundo item del accordion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion flush -->
+            <h5 class="text-success mt-3">Accordion Flush</h5>
+            <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
+                <div class="accordion-item bg-dark border border-success text-white">
+                    <h2 class="accordion-header" id="flushHeadingOne">
+                        <button class="accordion-button collapsed bg-black text-success" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseOne" aria-expanded="false" aria-controls="flushCollapseOne">
+                            Flush Item 1
+                        </button>
+                    </h2>
+                    <div id="flushCollapseOne" class="accordion-collapse collapse" aria-labelledby="flushHeadingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Contenido del primer flush item.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-dark border border-success text-white">
+                    <h2 class="accordion-header" id="flushHeadingTwo">
+                        <button class="accordion-button collapsed bg-black text-success" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseTwo" aria-expanded="false" aria-controls="flushCollapseTwo">
+                            Flush Item 2
+                        </button>
+                    </h2>
+                    <div id="flushCollapseTwo" class="accordion-collapse collapse" aria-labelledby="flushHeadingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Contenido del segundo flush item.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalInscripcion">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-white border border-success">
+                <div class="modal-header border-success">
+                    <h5 class="modal-title text-success">Formulario de Inscripción</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control mb-2">
+                        <label>Correo:</label>
+                        <input type="email" class="form-control mb-2">
+                        <label>Curso:</label>
+                        <select class="form-control mb-3">
+                            <option>Navbar</option>
+                            <option>Containers</option>
+                            <option>Tablas</option>
+                            <option>Botones</option>
+                        </select>
+                        <button class="btn btn-success w-100">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

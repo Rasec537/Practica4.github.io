@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - Curso Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- BANNER CON LOGOS -->
+    <div class="container-fluid p-0 position-relative mb-4">
+        <img src="img/LOGO. (1).png" class="position-absolute" style="width:120px; top:10px; left:10px; z-index:10;">
+        <img src="img/Banner.jpg" class="img-fluid w-100" alt="Banner Bootstrap">
+        <img src="img/SAL_GUT.jpeg" class="position-absolute" style="width:120px; top:10px; right:10px; z-index:10;">
+    </div>
+
+    <!-- BOTONES DE NAVEGACIÓN ENTRE MÓDULOS -->
+    <div class="text-center mb-4">
+        <a href="index.html" class="btn btn-outline-success fw-bold px-4 m-1">Inicio</a>
+        <a href="navbar.html" class="btn btn-outline-success fw-bold px-4 m-1">Navbar</a>
+        <a href="containers.html" class="btn btn-outline-success fw-bold px-4 m-1">Containers</a>
+        <a href="tables.html" class="btn btn-success fw-bold px-4 m-1">Tablas</a>
+        <button class="btn btn-warning fw-bold px-4 m-1" data-bs-toggle="modal" data-bs-target="#modalInscripcion">
+            Inscribirse
+        </button>
+    </div>
+
+    <!-- ALERTAS DE ESTUDIANTES -->
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-primary alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <b>Estudiantes activos:</b> matriculados al día con sus pagos.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning alert-dismissible fade show">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <b>Estudiantes con deuda:</b> existen 12 estudiantes que deben dinero.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTRODUCCIÓN AL MÓDULO -->
+    <div class="container mb-4">
+        <div class="bg-black border border-success p-4 rounded">
+            <h1 class="text-success">Módulo: Tablas en Bootstrap 5</h1>
+            <p>
+                En este módulo aprenderás cómo crear tablas responsivas utilizando Bootstrap 5.
+                Veremos desde tablas básicas hasta tablas interactivas con filas expandibles,
+                colores, alertas y botones de acción para una mejor experiencia de usuario.
+            </p>
+        </div>
+    </div>
+
+    <!-- EXPLICACIÓN DE LA TABLA -->
+    <div class="container mb-3">
+        <div class="bg-black border border-success p-3 rounded">
+            <h3 class="text-success">Cómo construimos la tabla</h3>
+            <p>
+                Usamos las clases <code>table</code>, <code>table-hover</code>, <code>table-striped</code> y <code>table-bordered</code>.
+                Cada fila representa un estudiante e incluye su foto, nombre, calificación y botones de acción.
+            </p>
+            <p>
+                Para mostrar fotos circulares usamos <code>img-thumbnail</code> y <code>rounded-circle</code>.
+                Los botones <code>btn-warning</code> y <code>btn-danger</code> permiten editar o eliminar registros.
+                Además, agregamos filas expandibles usando <code>collapse</code> para mostrar detalles adicionales.
+            </p>
+        </div>
+    </div>
+
+    <!-- TABLA PRINCIPAL CON FILAS EXPANDIBLES -->
+    <div class="container mb-5">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered table-dark text-white">
+                <thead class="table-success">
+                    <tr>
+                        <th>Nro°</th>
+                        <th>Estudiante</th>
+                        <th>Calificación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-bs-toggle="collapse" data-bs-target="#det1" class="cursor-pointer">
+                        <td>1</td>
+                        <td><img src="img/IBM.jpeg" width="50" class="img-thumbnail rounded-circle me-2">Jajajaj</td>
+                        <td class="text-center">
+                            <div class="progress">
+                                <div class="progress-bar bg-success progress-bar-animated progress-bar-striped" style="width:95%">95 puntos</div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr class="collapse" id="det1">
+                        <td colspan="4">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="img/lap.jpeg" width="140" class="img-thumbnail">
+                                </div>
+                                <div class="col-md-10">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Detalles adicionales del estudiante.
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="img/lap.jpeg" width="50" class="img-thumbnail rounded-circle me-2">Hola</td>
+                        <td class="text-center">
+                            <div class="progress">
+                                <div class="progress-bar bg-danger progress-bar-animated progress-bar-striped" style="width:34%">34 puntos</div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="img/quinta.jpeg" width="50" class="img-thumbnail rounded-circle me-2">Como estás</td>
+                        <td class="text-center">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary progress-bar-animated progress-bar-striped" style="width:68%">68 puntos</div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img src="img/primera1.jpg" width="50" class="img-thumbnail rounded-circle me-2">Ehola</td>
+                        <td class="text-center">
+                            <div class="progress">
+                                <div class="progress-bar bg-primary progress-bar-animated progress-bar-striped" style="width:10%">10 puntos</div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- LAYOUT CON COLUMNAS ADICIONALES -->
+    <div class="container mb-5">
+        <div class="bg-black border border-success p-4 rounded">
+            <h3 class="text-success">Cómo organizar contenido con columnas</h3>
+            <p>
+                Usamos la clase <code>row</code> para crear filas y <code>col-md-4</code> para dividir la página en tres columnas iguales.
+                Esto permite mostrar contenido adicional de forma ordenada.
+            </p>
+            <div class="row mt-3">
+                <div class="col-md-4 bg-dark border border-success p-3 me-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+                <div class="col-md-4 bg-dark border border-success p-3 me-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+                <div class="col-md-4 bg-dark border border-success p-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGINACIÓN -->
+    <div class="container mb-5">
+        <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">ANTERIOR</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">SIGUIENTE</a></li>
+        </ul>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers - Curso Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white">
+
+    <div class="container-fluid p-0 position-relative mb-3">
+
+        <img src="img/LOGO. (1).png" 
+             class="position-absolute" 
+             style="width:120px; top:10px; left:10px; z-index:10;">
+
+        <img src="img/Banner.jpg" class="img-fluid w-100" alt="Banner Curso Bootstrap">
+
+        <img src="img/SAL_GUT.jpeg" 
+             class="position-absolute" 
+             style="width:120px; top:10px; right:10px; z-index:10;">
+    </div>
+
+    <div class="text-center mb-4">
+        <a href="../index.html" class="btn btn-outline-success fw-bold px-4 m-1">Inicio</a>
+        <a href="tables.html" class="btn btn-outline-success fw-bold px-4 m-1">Tablas</a>
+        <a href="containers.html" class="btn btn-success fw-bold px-4 m-1">Containers</a>
+        <a href="imagenes.html" class="btn btn-outline-success fw-bold px-4 m-1">Imágenes</a>
+        <a href="buttons.html" class="btn btn-outline-success fw-bold px-4 m-1">Botones</a>
+        <a href="badge.html" class="btn btn-outline-success fw-bold px-4 m-1">Badges</a>
+        <a href="navbar.html" class="btn btn-outline-success fw-bold px-4 m-1">Navbar</a>
+
+        <button class="btn btn-warning fw-bold px-4 m-1" data-bs-toggle="modal" data-bs-target="#modalInscripcion">
+            Inscribirse
+        </button>
+    </div>
+
+    <div class="container mb-4">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h1 class="text-success mb-3">¿Qué es un Container en Bootstrap 5?</h1>
+
+            <p>
+                En Bootstrap, un <strong>container</strong> es un elemento fundamental que ayuda a organizar 
+                y centrar el contenido de una página web.  
+                Siempre es recomendable que toda estructura comience dentro de un container.
+            </p>
+
+            <p>Existen tres tipos principales de containers:</p>
+
+            <ul>
+                <li><strong>.container</strong>: ancho adaptativo, centrado.</li>
+                <li><strong>.container-fluid</strong>: ocupa el 100% del ancho.</li>
+                <li><strong>.container-{breakpoint}</strong>: se vuelve fijo a partir de un tamaño específico.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+
+            <h2 class="text-success">Comparación visual de Containers</h2>
+            <p>
+                Aquí puedes ver cómo cambia el ancho de cada container según el tamaño de la pantalla.
+            </p>
+
+            <div class="mb-3 p-3 bg-dark border border-secondary rounded">
+                <strong class="text-info">.container</strong>
+                <div class="p-3 bg-secondary text-dark rounded">
+                    Ancho adaptado — centrado
+                </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-dark border border-secondary rounded">
+                <strong class="text-warning">.container-fluid</strong>
+                <div class="p-3 bg-warning text-dark rounded">
+                    Ancho completo — ocupa todo el espacio disponible
+                </div>
+            </div>
+
+            <div class="mb-3 p-3 bg-dark border border-secondary rounded">
+                <strong class="text-success">.container-md</strong>
+                <div class="p-3 bg-success text-dark rounded">
+                    Se comporta como fluid en pantallas pequeñas,
+                    pero desde "md" tiene un ancho máximo.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <div class="p-4 border border-success rounded bg-black">
+            <h2 class="text-success">Ejemplo de .container</h2>
+            <p>
+                Este bloque está dentro de un <strong>.container</strong>, su ancho se adapta.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+        <div class="p-4 border border-warning rounded bg-black">
+            <h2 class="text-warning">Ejemplo de .container-fluid</h2>
+            <p>
+                Ocupa el 100% del ancho disponible.
+            </p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="bg-black border border-success p-4 rounded">
+
+            <h2 class="text-success">Combinando Containers con Columnas</h2>
+            <p>
+                Los containers organizan filas (<strong>.row</strong>) y columnas (<strong>.col</strong>), 
+                lo que permite construir estructuras responsivas.
+            </p>
+
+            <div class="row text-center">
+                <div class="col bg-dark border border-secondary p-3 m-1 rounded">Columna 1</div>
+                <div class="col bg-dark border border-secondary p-3 m-1 rounded">Columna 2</div>
+                <div class="col bg-dark border border-secondary p-3 m-1 rounded">Columna 3</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4">
+
+            <h2 class="text-success">Ejemplo Avanzado: Columnas Responsivas</h2>
+            <p>
+                Bootstrap permite definir cuántas columnas ocupa cada elemento según el tamaño del dispositivo.
+            </p>
+
+            <div class="row text-center">
+                <div class="col-12 col-md-6 col-xl-3 bg-dark border border-secondary p-3 m-1 rounded">
+                    .col-12 .col-md-6 .col-xl-3
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 bg-dark border border-secondary p-3 m-1 rounded">
+                    .col-12 .col-md-6 .col-xl-3
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 bg-dark border border-secondary p-3 m-1 rounded">
+                    .col-12 .col-md-6 .col-xl-3
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3 bg-dark border border-secondary p-3 m-1 rounded">
+                    .col-12 .col-md-6 .col-xl-3
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="bg-black border border-success p-4 rounded">
+
+            <h2 class="text-success">Padding y Margen en Containers</h2>
+            <p>Se controlan con clases como:</p>
+
+            <ul>
+                <li><strong>.p-*</strong> → Padding</li>
+                <li><strong>.m-*</strong> → Margin</li>
+                <li>Valores del 0 al 5</li>
+            </ul>
+
+            <div class="p-5 bg-dark border border-secondary rounded mt-3">
+                <strong class="text-info">Ejemplo: .p-5 dentro de un container</strong>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalInscripcion">
+        <div class="modal-dialog">
+            <div class="modal-content bg-black text-white border border-success">
+                
+                <div class="modal-header border-success">
+                    <h5 class="modal-title text-success">Formulario de Inscripción</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control mb-2">
+
+                        <label>Correo:</label>
+                        <input type="email" class="form-control mb-2">
+
+                        <label>Curso:</label>
+                        <select class="form-control mb-3">
+                            <option>Containers</option>
+                            <option>Tablas</option>
+                            <option>Imágenes</option>
+                            <option>Botones</option>
+                        </select>
+
+                        <button class="btn btn-success w-100">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

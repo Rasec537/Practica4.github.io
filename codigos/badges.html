@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons & Badges - Curso Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <div class="container-fluid p-0 position-relative mb-3">
+        <img src="img/Banner.jpg" class="img-fluid w-100" alt="Banner Curso Bootstrap">
+        <img src="img/LOGO. (1).png" class="position-absolute" style="width:120px; top:10px; left:10px; z-index:10;">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-success mb-4">
+        <div class="container">
+            <a class="navbar-brand text-success" href="buttons.html">Buttons & Badges</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBtn">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarBtn">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="buttons.html">Botones</a></li>
+                   
+                    <li class="nav-item"><a class="nav-link text-white" href="containers.html">Containers</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="imagenes.html">Imágenes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="tables.html">Tables</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="navbar.html">Navbar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success mb-3">Botones en Bootstrap 5</h2>
+            <p class="text-white">Diferentes estilos de botones, tamaños y bloques:</p>
+
+            <h5 class="text-info mt-3">Botones primarios y colores</h5>
+            <button class="btn btn-primary me-2 mb-2">Primario</button>
+            <button class="btn btn-success me-2 mb-2">Éxito</button>
+            <button class="btn btn-danger me-2 mb-2">Peligro</button>
+            <button class="btn btn-warning me-2 mb-2">Advertencia</button>
+            <button class="btn btn-info me-2 mb-2">Información</button>
+
+            <h5 class="text-info mt-3">Botones Outline</h5>
+            <button class="btn btn-outline-primary me-2 mb-2">Outline Primario</button>
+            <button class="btn btn-outline-success me-2 mb-2">Outline Éxito</button>
+            <button class="btn btn-outline-danger me-2 mb-2">Outline Peligro</button>
+            <button class="btn btn-outline-warning me-2 mb-2">Outline Advertencia</button>
+
+            <h5 class="text-info mt-3">Botones con tamaños</h5>
+            <button class="btn btn-primary btn-lg me-2 mb-2">Grande</button>
+            <button class="btn btn-primary btn-sm me-2 mb-2">Pequeño</button>
+
+            <h5 class="text-info mt-3">Botones bloque (ancho completo)</h5>
+            <button class="btn btn-success btn-lg w-100 mb-2">Bloque Completo</button>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success mb-3">Badges en Bootstrap 5</h2>
+            <p class="text-white">Se pueden usar dentro de textos o dentro de botones:</p>
+
+            <h5 class="text-info mt-3">Badges en textos</h5>
+            <p class="text-white">
+                Estudiante activo <span class="badge bg-success">Activo</span><br>
+                Estudiante con deuda <span class="badge bg-danger">Deuda</span><br>
+                Curso completado <span class="badge bg-primary">Finalizado</span>
+            </p>
+
+            <h5 class="text-info mt-3">Badges en botones</h5>
+            <button class="btn btn-primary me-2 mb-2">
+                Mensajes <span class="badge bg-light text-dark">4</span>
+            </button>
+            <button class="btn btn-success me-2 mb-2">
+                Notificaciones <span class="badge bg-dark">8</span>
+            </button>
+            <button class="btn btn-warning me-2 mb-2">
+                Alertas <span class="badge bg-danger">2</span>
+            </button>
+
+            <h5 class="text-info mt-3">Badges de colores variados</h5>
+            <span class="badge bg-primary me-1 mb-1">Primario</span>
+            <span class="badge bg-success me-1 mb-1">Éxito</span>
+            <span class="badge bg-danger me-1 mb-1">Peligro</span>
+            <span class="badge bg-warning text-dark me-1 mb-1">Advertencia</span>
+            <span class="badge bg-info text-dark me-1 mb-1">Información</span>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success mb-3">Consejos y buenas prácticas</h2>
+            <ul class="text-white">
+                <li>Usa <code>btn-outline-*</code> para botones menos llamativos.</li>
+                <li>Botones bloque <code>w-100</code> son útiles para formularios o paneles laterales.</li>
+                <li>Badges ayudan a resaltar información importante sin saturar la página.</li>
+                <li>Combina colores de badges y botones para crear jerarquía visual.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="card bg-black border border-success p-4 rounded">
+            <h2 class="text-success mb-3">Ejemplo práctico: tabla con botones y badges</h2>
+            <p class="text-white">Así se vería en una página real, combinando botones y badges en cada fila:</p>
+
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered text-center">
+                    <thead class="table-success">
+                        <tr>
+                            <th>#</th>
+                            <th>Estudiante</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="img/npc.png" width="40" class="img-thumbnail rounded-circle me-2"> Juan Pérez</td>
+                            <td><span class="badge bg-success">Activo</span></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">Ver</button>
+                                <button class="btn btn-warning btn-sm">Editar</button>
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="img/lap.jpeg" width="40" class="img-thumbnail rounded-circle me-2"> María López</td>
+                            <td><span class="badge bg-danger">Deuda</span></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">Ver</button>
+                                <button class="btn btn-warning btn-sm">Editar</button>
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="img/IBM.jpeg" width="40" class="img-thumbnail rounded-circle me-2"> Carlos Ruiz</td>
+                            <td><span class="badge bg-info text-dark">Finalizado</span></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm">Ver</button>
+                                <button class="btn btn-warning btn-sm">Editar</button>
+                                <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
